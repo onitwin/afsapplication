@@ -7,7 +7,7 @@ import {EmployeesComponent} from './home/employees/employees.component' //import
 import {AuthGuard} from './auth/auth.guard'
 
 const routes: Routes = [
-  {path:'auth',component:AuthComponent},
+  {path:'login',component:AuthComponent},
   {path:'home',component:HomeComponent, children:[
     {path:'customers',component:CustomersComponent,canActivate:[AuthGuard]},
     {path:'employees',component:EmployeesComponent,canActivate:[AuthGuard]}

@@ -20,6 +20,11 @@ import {NgZorroAntdModule} from './ng-zorro-antd/ng-zorro-antd.module';
 import * as AllIcons from '@ant-design/icons-angular/icons';
 import { NZ_ICONS } from 'ng-zorro-antd/icon';
 import { IconDefinition } from '@ant-design/icons-angular';
+import { AmplifyUIAngularModule } from '@aws-amplify/ui-angular';
+import Amplify from 'aws-amplify';
+import awsconfig from '../aws-exports';
+
+Amplify.configure(awsconfig);
 
 registerLocaleData(en);
 const antDesignIcons = AllIcons as {
@@ -43,7 +48,8 @@ const icons: IconDefinition[] = Object.keys(antDesignIcons).map(key => antDesign
     BrowserAnimationsModule,
     NzButtonModule,
     NzLayoutModule,
-    NgZorroAntdModule
+    NgZorroAntdModule,
+    AmplifyUIAngularModule
 
   ],
   providers: [{ provide: NZ_I18N, useValue: en_GB }, { provide: NZ_ICONS, useValue: icons }],
