@@ -1,0 +1,9 @@
+{
+	"auth": {
+		"afsjwdassessment4008562140085621": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"dependsOn": []
+		}
+	}
+}
